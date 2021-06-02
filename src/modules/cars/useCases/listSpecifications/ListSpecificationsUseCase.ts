@@ -9,8 +9,8 @@ class ListSpecificationsUseCase {
         private specificationsRepository: SpecificationsRepository
     ) {}
 
-    handle(): Specification[] {
-        return this.specificationsRepository.list();
+    async handle(): Promise<Specification[]> {
+        return await this.specificationsRepository.list();
     }
 }
 
